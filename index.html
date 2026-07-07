@@ -9,21 +9,21 @@
 </head>
 <body class="font-body-md text-body-md overflow-x-hidden">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl saturate-180 dark:bg-surface-container-low/80 shadow-sm border-b border-outline-variant/10 h-20">
+<nav class="fixed top-0 w-full z-50 bg-gray-100/90 backdrop-blur-xl saturate-180 dark:bg-gray-100/90 shadow-sm border-b border-outline-variant/10 h-24 text-gray-900">
 <div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-full">
-<div class="flex items-center bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-2xl shadow-lg border border-white/20">
-    <img src="/logo.png" alt="Steve Jon Solutions Logo" class="h-10 md:h-16 w-auto object-contain mix-blend-multiply">
+<div class="flex items-center">
+    <img src="/logo.png" alt="Steve Jon Solutions Logo" class="h-12 md:h-20 w-auto object-contain">
 </div>
 <div class="hidden md:flex gap-8 items-center">
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#services">Services</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#portfolio">Portfolio</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#process">Process</a>
-<a class="text-on-surface-variant hover:text-on-surface transition-colors font-body-md text-body-md" href="#about">About</a>
+<a class="text-gray-600 hover:text-gray-900 transition-colors font-body-md text-body-md" href="#services">Services</a>
+<a class="text-gray-600 hover:text-gray-900 transition-colors font-body-md text-body-md" href="#portfolio">Portfolio</a>
+<a class="text-gray-600 hover:text-gray-900 transition-colors font-body-md text-body-md" href="#process">Process</a>
+<a class="text-gray-600 hover:text-gray-900 transition-colors font-body-md text-body-md" href="#about">About</a>
 <a class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold active:scale-95 transition-all hover:bg-primary-container/90" href="#contact">
                     Get Free Consultation
                 </a>
 </div>
-<button class="md:hidden text-on-surface">
+<button class="md:hidden text-gray-900">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -369,20 +369,21 @@
 <div>
 <h2 class="font-headline-lg text-3xl md:text-headline-lg mb-8">Let's Build Something <br><span class="text-primary">Exceptional</span> Together</h2>
 <p class="text-on-surface-variant mb-12">Ready to start your digital transformation? Fill out the form or reach us via our details.</p>
-<form class="space-y-6">
+<form id="contact-form" action="https://formsubmit.co/info@stevejon.com" method="POST" class="space-y-6">
+<input type="hidden" name="_captcha" value="false">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block font-label-sm text-label-sm mb-2 text-on-surface-variant uppercase tracking-wider">Full Name</label>
-<input class="w-full bg-background border border-outline-variant rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text">
+<input class="w-full bg-background border border-outline-variant rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="John Doe" type="text" name="name" required>
 </div>
 <div>
 <label class="block font-label-sm text-label-sm mb-2 text-on-surface-variant uppercase tracking-wider">Work Email</label>
-<input class="w-full bg-background border border-outline-variant rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="john@company.com" type="email">
+<input class="w-full bg-background border border-outline-variant rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="john@company.com" type="email" name="email" required>
 </div>
 </div>
 <div>
 <label class="block font-label-sm text-label-sm mb-2 text-on-surface-variant uppercase tracking-wider">Project Type</label>
-<select class="w-full bg-background border border-outline-variant rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all">
+<select class="w-full bg-background border border-outline-variant rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all" name="project_type">
 <option>Custom Software</option>
 <option>Mobile Application</option>
 <option>Web Platform</option>
@@ -391,9 +392,10 @@
 </div>
 <div>
 <label class="block font-label-sm text-label-sm mb-2 text-on-surface-variant uppercase tracking-wider">Message</label>
-<textarea class="w-full bg-background border border-outline-variant rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Tell us about your vision..." rows="4"></textarea>
+<textarea class="w-full bg-background border border-outline-variant rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Tell us about your vision..." rows="4" name="message" required></textarea>
 </div>
-<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl hover:scale-[1.02] active:scale-95 transition-all">Send Message</button>
+<button type="submit" class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl hover:scale-[1.02] active:scale-95 transition-all">Send Message</button>
+<div id="form-message" class="hidden text-center mt-4 font-bold"></div>
 </form>
 </div>
 <div class="flex flex-col justify-between">
@@ -402,14 +404,14 @@
 <span class="material-symbols-outlined text-primary text-3xl">mail</span>
 <div>
 <h4 class="font-bold">Email Us</h4>
-<p class="text-on-surface-variant">hello@stevejonsolutions.com</p>
+<p class="text-on-surface-variant">info@stevejon.com</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
 <span class="material-symbols-outlined text-primary text-3xl">call</span>
 <div>
 <h4 class="font-bold">Phone</h4>
-<p class="text-on-surface-variant">+91 98765 43210</p>
+<p class="text-on-surface-variant">9995433003</p>
 </div>
 </div>
 <div class="flex items-start gap-4">
@@ -428,50 +430,59 @@
 </div>
 </section>
 <!-- Footer -->
-<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full border-t border-outline-variant/10">
+<footer class="bg-gray-100 dark:bg-gray-100 text-gray-900 w-full border-t border-outline-variant/10">
 <div class="max-w-container-max mx-auto px-margin-desktop py-20 grid grid-cols-1 md:grid-cols-4 gap-gutter">
 <div class="col-span-1 md:col-span-1">
-<div class="mb-6 inline-block bg-white/95 px-6 py-3 rounded-2xl shadow-lg">
-    <img src="/logo.png" alt="Steve Jon Solutions Logo" class="h-14 md:h-20 w-auto object-contain mix-blend-multiply">
+<div class="mb-6 inline-block">
+    <img src="/logo.png" alt="Steve Jon Solutions Logo" class="h-20 md:h-32 w-auto object-contain">
 </div>
-<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Building the digital future with technical precision and surgical craftsmanship. Expert software solutions for modern enterprises.</p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">public</span>
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">share</span>
-<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer">alternate_email</span>
+<p class="text-gray-600 text-sm leading-relaxed mb-6">Building the digital future with technical precision and surgical craftsmanship. Expert software solutions for modern enterprises.</p>
+<div class="flex gap-4 items-center">
+<a href="https://www.instagram.com/stevejonsolutions?igsh=MXJ0ZXpkemJsbTVjYw==" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
+<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+</a>
+<a href="https://www.facebook.com/share/1TjDSdNcTy/" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
+<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+</a>
+<a href="https://www.threads.com/@stevejonsolutions" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
+<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M14.072 20.301c-1.391.464-2.912.576-4.394.341-2.023-.321-3.83-1.428-5.044-3.111-1.205-1.664-1.743-3.719-1.503-5.748.24-2.021 1.258-3.855 2.836-5.12 1.579-1.266 3.606-1.842 5.626-1.597 1.895.23 3.605 1.189 4.8 2.664.296.368.566.757.808 1.168.106.183.195.385.253.593.033.117.155.197.275.18h2.091c.148 0 .265-.13.25-.278-.063-.564-.207-1.116-.425-1.637-.624-1.492-1.6-2.795-2.846-3.774C14.777 2.378 12.186 1.734 9.544 2.1c-2.61.365-4.957 1.722-6.55 3.8-1.583 2.063-2.274 4.707-1.936 7.305.337 2.593 1.633 4.962 3.633 6.643 2.016 1.69 4.618 2.518 7.247 2.3 1.94-.162 3.79-.893 5.342-2.115 1.488-1.173 2.595-2.736 3.167-4.526.471-1.472.636-3.033.473-4.573-.207-1.96-1.025-3.791-2.316-5.215-1.296-1.431-3.018-2.39-4.887-2.72-1.884-.334-3.834-.092-5.552.709-1.726.804-3.155 2.148-4.062 3.821-.901 1.66-.192 3.238.167 4.71.368 1.5.097 2.946.541 4.293 1.258.916 2.766 1.341 4.391 1.251 1.583-.087 3.093-.728 4.24-1.802 1.135-1.06 1.905-2.493 2.164-4.041.054-.325-.098-.65-.37-.803l-1.864-.997c-.244-.131-.54-.055-.71.163-.695.892-1.748 1.442-2.871 1.493-1.157.051-2.296-.44-3.097-1.32-.782-.863-1.127-2.039-1.002-3.195.127-1.172.761-2.247 1.748-2.932.999-.694 2.228-.921 3.407-.638 1.151.275 2.155 1.01 2.723 2.016.14.25.105.568-.093.774l-1.067.893c-.092.077-.145.188-.145.308v6.486c0 .138.08.261.206.313z"/></svg>
+</a>
+<a href="https://wa.me/919995433003" target="_blank" class="text-gray-600 hover:text-primary transition-colors">
+<svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12.031 0C5.397 0 .016 5.38.016 12.014c0 2.115.548 4.182 1.59 6.002L.004 24l6.113-1.603a11.96 11.96 0 005.914 1.564h.005c6.632 0 12.013-5.381 12.013-12.015C24.049 5.38 18.666 0 12.031 0zM12.03 21.956h-.003c-1.787 0-3.539-.48-5.073-1.39l-.364-.216-3.773.99.998-3.68-.236-.376a10.02 10.02 0 01-1.53-5.32c0-5.526 4.498-10.025 10.025-10.025 5.525 0 10.023 4.498 10.023 10.025 0 5.526-4.498 10.025-10.024 10.025zm5.502-7.502c-.302-.152-1.783-.881-2.062-.981-.277-.102-.48-.152-.682.152-.202.302-.782.981-.958 1.183-.176.202-.353.226-.656.075-.302-.152-1.272-.469-2.424-1.498-.895-.8-1.5-1.788-1.676-2.09-.176-.303-.018-.467.133-.618.136-.137.302-.353.454-.53.15-.176.202-.302.302-.505.101-.202.05-.378-.025-.53-.075-.152-.682-1.642-.934-2.25-.246-.591-.497-.512-.682-.52h-.581c-.202 0-.53.076-.807.378-.278.303-1.06 1.035-1.06 2.525 0 1.49 1.085 2.93 1.236 3.132.152.202 2.133 3.255 5.166 4.56.721.31 1.282.496 1.722.635.723.23 1.381.197 1.897.12.583-.087 1.783-.73 2.035-1.436.252-.705.252-1.312.176-1.437-.075-.126-.277-.202-.579-.354z"/></svg>
+</a>
 </div>
 </div>
 <div>
 <h4 class="font-bold mb-6">Services</h4>
 <ul class="space-y-4">
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Software Development</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Web App Development</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Mobile Solutions</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Cloud Migration</a></li>
+<li><a class="text-gray-600 hover:text-primary transition-colors font-body-md text-body-md" href="#">Software Development</a></li>
+<li><a class="text-gray-600 hover:text-primary transition-colors font-body-md text-body-md" href="#">Web App Development</a></li>
+<li><a class="text-gray-600 hover:text-primary transition-colors font-body-md text-body-md" href="#">Mobile Solutions</a></li>
+<li><a class="text-gray-600 hover:text-primary transition-colors font-body-md text-body-md" href="#">Cloud Migration</a></li>
 </ul>
 </div>
 <div>
 <h4 class="font-bold mb-6">Company</h4>
 <ul class="space-y-4">
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">About Us</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Our Portfolio</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a></li>
-<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Terms of Service</a></li>
+<li><a class="text-gray-600 hover:text-primary transition-colors font-body-md text-body-md" href="#">About Us</a></li>
+<li><a class="text-gray-600 hover:text-primary transition-colors font-body-md text-body-md" href="#">Our Portfolio</a></li>
+<li><a class="text-gray-600 hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-gray-600 hover:text-primary transition-colors font-body-md text-body-md" href="#">Terms of Service</a></li>
 </ul>
 </div>
 <div>
 <h4 class="font-bold mb-6">Stay Connected</h4>
-<p class="text-on-surface-variant text-sm mb-4">Subscribe to our newsletter for latest tech insights.</p>
+<p class="text-gray-600 text-sm mb-4">Subscribe to our newsletter for latest tech insights.</p>
 <div class="flex gap-2">
-<input class="bg-surface-container border border-outline-variant rounded-lg px-4 py-2 w-full text-sm" placeholder="Email address" type="email">
+<input class="bg-white border border-outline-variant rounded-lg px-4 py-2 w-full text-sm text-gray-900" placeholder="Email address" type="email">
 <button class="bg-primary-container p-2 rounded-lg text-on-primary-container">
 <span class="material-symbols-outlined">send</span>
 </button>
 </div>
 </div>
 </div>
-<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline-variant/5 text-center text-on-surface-variant text-xs">
-            © 2024 Steve Jon Solutions LLP. All rights reserved. Calicut, Kerala.
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline-variant/5 text-center text-gray-600 text-xs">
+            © 2023 Steve Jon Solutions LLP. All rights reserved. Calicut, Kerala.
         </div>
 </footer>
 <script>
@@ -504,5 +515,51 @@
             section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
             observer.observe(section);
         });
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(contactForm);
+                const url = contactForm.getAttribute('action');
+                
+                formMessage.classList.remove('hidden', 'text-red-500', 'text-green-500');
+                formMessage.classList.add('text-primary');
+                formMessage.textContent = 'Sending message...';
+                
+                fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        formMessage.classList.remove('text-primary');
+                        formMessage.classList.add('text-green-500');
+                        formMessage.textContent = 'msg send ok';
+                        contactForm.reset();
+                    } else {
+                        response.json().then(data => {
+                            formMessage.classList.remove('text-primary');
+                            formMessage.classList.add('text-red-500');
+                            if (Object.hasOwn(data, 'errors')) {
+                                formMessage.textContent = data["errors"].map(error => error["message"]).join(", ");
+                            } else {
+                                formMessage.textContent = 'Oops! There was a problem submitting your form';
+                            }
+                        })
+                    }
+                })
+                .catch(error => {
+                    formMessage.classList.remove('text-primary');
+                    formMessage.classList.add('text-red-500');
+                    formMessage.textContent = 'Oops! There was a problem submitting your form';
+                });
+            });
+        }
     </script>
 </body></html>
